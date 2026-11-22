@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mishra Book Store | Competitive Exam Books</title>
+  <meta name="description" content="Books for SSC, Railway, Banking, UPSC, UP Police, CTET, NEET and JEE. Hindi and English medium.">
+  <meta name="theme-color" content="#0E1740">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231B2A6B'/%3E%3Ccircle cx='11' cy='11' r='4' fill='none' stroke='white' stroke-width='2'/%3E%3Ccircle cx='21' cy='11' r='4' fill='%23F26B21'/%3E%3Ccircle cx='11' cy='21' r='4' fill='none' stroke='white' stroke-width='2'/%3E%3Ccircle cx='21' cy='21' r='4' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BookStore",
+    "name": "Mishra Book Store",
+    "description": "Competitive exam books in Hindi and English for SSC, Railway, Banking, UPSC, Police, Teaching and entrance exams.",
+    "hasMap": "https://www.google.com/maps/place/Mishra+BOOK+STORE/@27.0281774,79.9230494,17z",
+    "geo": { "@type": "GeoCoordinates", "latitude": 27.0281726, "longitude": 79.9256243 }
+  }
+  </script>
+  <script>
+    /* Runs before the page paints: marks JS as available and keeps the preloader from ever getting stuck. */
+    (function () {
+      var h = document.documentElement;
+      h.classList.add('js', 'is-loading');
+      window.__plFail = setTimeout(function () {
+        h.classList.remove('is-loading'); h.classList.add('page-ready');
+        var p = document.getElementById('preloader'); if (p) p.classList.add('done', 'gone');
+      }, 8000);
+    })();
+  </script>
+  <noscript><style>.preloader{display:none!important}html.is-loading{overflow:auto!important}</style></noscript>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="pl-half pl-top"></div>
+    <div class="pl-half pl-bot"></div>
+    <div class="pl-center">
+      <div class="pl-stage">
+        <div class="pl-glow"></div>
+        <div class="pl-book">
+          <div class="pl-back"></div>
+          <div class="pl-page" style="--i:0"></div>
+          <div class="pl-page" style="--i:1"></div>
+          <div class="pl-page" style="--i:2"></div>
+          <div class="pl-page" style="--i:3"></div>
+          <div class="pl-page" style="--i:4"></div>
+          <div class="pl-page" style="--i:5"></div>
+        </div>
+      </div>
+      <div class="pl-name">
+        <span class="pl-w"><b style="--d:0">Mishra</b></span>
+        <span class="pl-w"><b class="gold" style="--d:1">Book Store</b></span>
+      </div>
+      <p class="pl-tag">Competitive exam books &middot; <span class="hi">प्रतियोगी परीक्षा</span></p>
+      <div class="pl-omr">
+        <span><i></i><em>A</em></span><span><i></i><em>B</em></span><span><i></i><em>C</em></span><span><i></i><em>D</em></span>
+      </div>
+      <div class="pl-bar"><i id="plBar"></i></div>
+    </div>
+  </div>
+
+  <a class="skip" href="#catalogue">Skip to books</a>
+
+  <div class="demo-bar" id="demoBar" hidden>Demo catalogue: titles, prices and stock shown here are samples. Edit <code>js/data.js</code> to add your real books.</div>
+
+  <div class="topbar">
+    <div class="container topbar-in">
+      <span>Hindi &amp; English medium books for every government exam</span>
+      <span class="hi">प्रतियोगी परीक्षा की सभी किताबें</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-in">
+      <a class="brand" href="index.html" aria-label="Mishra Book Store home">
+        <span class="logo" aria-hidden="true"><i></i><i class="on"></i><i></i><i></i></span>
+        <span class="brand-text"><b>Mishra</b> Book Store</span>
+      </a>
+
+      <div class="search-wrap">
+        <form class="search" id="searchForm" role="search">
+          <label class="sr" for="searchCat">Category</label>
+          <select id="searchCat"></select>
+          <label class="sr" for="searchQ">Search books</label>
+          <input id="searchQ" type="search" placeholder="Search books, authors, exams" autocomplete="off">
+          <button type="submit" class="search-btn" aria-label="Search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </button>
+        </form>
+        <div class="suggest" id="suggest" hidden></div>
+      </div>
+
+      <div class="actions">
+        <button class="act" type="button" id="wishBtn" aria-label="Wishlist">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.9a4.3 4.3 0 0 1 7.5 2.6c0 5.4-7.5 10-7.5 10Z"/></svg>
+          <span class="act-label">Wishlist</span><span class="count" id="wishCount">0</span>
+        </button>
+        <button class="act" type="button" id="cartBtn" aria-label="Open cart">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.4l2.2 10.2a1 1 0 0 0 1 .8h8.7a1 1 0 0 0 1-.8L20 8H6.2"/><circle cx="9.5" cy="19" r="1.3"/><circle cx="16.5" cy="19" r="1.3"/></svg>
+          <span class="act-label">Cart</span><span class="count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="catnav" aria-label="Exam categories">
+      <div class="container catnav-in" id="catNav"></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" aria-label="Featured">
+      <div class="slider" id="slider" aria-roledescription="carousel">
+        <div class="slides" id="slides"></div>
+        <button class="sl-btn prev" type="button" id="slPrev" aria-label="Previous slide">&#8249;</button>
+        <button class="sl-btn next" type="button" id="slNext" aria-label="Next slide">&#8250;</button>
+        <div class="dots" id="dots" role="tablist" aria-label="Choose slide"></div>
+      </div>
+    </section>
+
+    <section class="container perks" aria-label="Why shop with us">
+      <div class="perk reveal" style="--rd:0s"><b>Hindi &amp; English</b><span>Both mediums, same shelf</span></div>
+      <div class="perk reveal" style="--rd:.08s"><b>Latest editions</b><span>Current exam pattern</span></div>
+      <div class="perk reveal" style="--rd:.16s"><b>Order on WhatsApp</b><span>Send your cart in one tap</span></div>
+      <a class="perk reveal" style="--rd:.24s" href="#visit"><b>Visit the shop</b><span>Pick up and flip through</span></a>
+    </section>
+
+    <section class="container block reveal" aria-labelledby="shopExamH">
+      <div class="block-head">
+        <h2 id="shopExamH">Shop by exam</h2>
+        <span class="hi sub">अपनी परीक्षा चुनें</span>
+      </div>
+      <div class="exam-grid" id="examGrid"></div>
+    </section>
+
+    <div id="rails"></div>
+
+    <section class="container promos" aria-label="Offers">
+      <button class="promo p1 reveal" style="--rd:0s" type="button" data-exam="ssc">
+        <small>Previous year papers</small>
+        <strong>Practice with solved papers</strong>
+        <span>Shop SSC &rarr;</span>
+      </button>
+      <button class="promo p2 reveal" style="--rd:.1s" type="button" data-lang="Hindi">
+        <small class="hi">हिंदी माध्यम</small>
+        <strong class="hi">हिंदी में तैयारी करें</strong>
+        <span>Shop Hindi books &rarr;</span>
+      </button>
+      <button class="promo p3 reveal" style="--rd:.2s" type="button" data-exam="ca">
+        <small>Every month</small>
+        <strong>Magazines &amp; current affairs</strong>
+        <span>Shop now &rarr;</span>
+      </button>
+    </section>
+
+    <section class="container block" id="catalogue" aria-labelledby="catH">
+      <div class="block-head">
+        <h2 id="catH">All books</h2>
+        <span class="sub" id="resultCount" aria-live="polite"></span>
+      </div>
+
+      <div class="toolbar">
+        <div class="chips" id="chips" role="group" aria-label="Filter by exam"></div>
+        <div class="selects">
+          <label class="sr" for="langSel">Language</label>
+          <select id="langSel">
+            <option value="all">All languages</option>
+            <option value="Hindi">Hindi</option>
+            <option value="English">English</option>
+          </select>
+          <label class="sr" for="sortSel">Sort by</label>
+          <select id="sortSel">
+            <option value="featured">Featured</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+            <option value="disc">Biggest discount</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="active-tags" id="activeTags"></div>
+
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section class="container block" id="visit" aria-labelledby="visitH">
+      <div class="block-head">
+        <h2 id="visitH">Visit the shop</h2>
+        <span class="hi sub">दुकान पर आइए</span>
+      </div>
+      <div class="visit-grid reveal">
+        <div class="visit-card">
+          <p class="visit-lead">Come in, flip through the books and pick the edition that suits your exam. Hindi and English medium titles are on the same shelves.</p>
+          <ul class="visit-info" id="visitInfo"></ul>
+          <div class="visit-actions">
+            <a class="btn-cta" id="dirBtn" href="https://www.google.com/maps/dir/?api=1&amp;destination=27.0281726,79.9256243" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn-ghost" id="mapBtn" href="#" target="_blank" rel="noopener">Open in Google Maps</a>
+          </div>
+        </div>
+        <div class="map-frame">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3554.063079968981!2d79.9256243!3d27.0281726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399e6566a4e8948f%3A0x8bc31e4f6889313b!2sMishra%20BOOK%20STORE!5e0!3m2!1sen!2sin!4v1795364850581!5m2!1sen!2sin" title="Mishra Book Store on Google Maps" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container foot-grid">
+      <div>
+        <div class="brand-text foot-brand"><b>Mishra</b> Book Store</div>
+        <p>Competitive exam books for students preparing for government jobs and entrance tests.</p>
+        <p class="hi">प्रतियोगी परीक्षा की किताबें</p>
+      </div>
+      <div>
+        <h3>Exams</h3>
+        <ul id="footExams"></ul>
+      </div>
+      <div>
+        <h3>Help</h3>
+        <ul>
+          <li><button type="button" class="linkbtn" id="footCart">Your cart</button></li>
+          <li><button type="button" class="linkbtn" data-lang="Hindi">Hindi medium books</button></li>
+          <li><button type="button" class="linkbtn" data-lang="English">English medium books</button></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Visit us</h3>
+        <ul id="footContact"></ul>
+      </div>
+    </div>
+    <div class="container foot-base">
+      <span>&copy; <span id="year"></span> Mishra Book Store</span>
+      <span>Prices and availability can change. Please confirm at the shop.</span>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="drawer" id="drawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-head">
+      <h2>Your cart</h2>
+      <button type="button" class="x" id="drawerClose" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="drawer-body" id="drawerBody"></div>
+    <div class="drawer-foot" id="drawerFoot"></div>
+  </aside>
+
+  <dialog class="dlg" id="dlg" aria-label="Book details">
+    <button type="button" class="x dlg-x" id="dlgClose" aria-label="Close">&times;</button>
+    <div class="dlg-body" id="dlgBody"></div>
+  </dialog>
+
+  <button type="button" class="totop" id="toTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 6-6 6 6"/></svg>
+  </button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
